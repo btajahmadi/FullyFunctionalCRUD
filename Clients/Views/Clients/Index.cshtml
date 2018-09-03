@@ -1,2 +1,26 @@
-﻿<h2>All clients</h2>
+﻿@model IEnumerable<Client>
+
+<h2>All clients</h2>
+
+<form method="post">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <a asp-action="Create">Create New</a>
+
+</form>
 

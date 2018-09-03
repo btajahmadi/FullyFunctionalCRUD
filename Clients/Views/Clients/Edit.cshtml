@@ -1,0 +1,14 @@
+﻿@model Clients.Models.Client
+
+<h2>Edit</h2>
+
+
+<form method="post" class="form-inline">
+    <div><input type="hidden" asp-for="Id" /></div>
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input type="text" asp-for="Name" />
+    </div>
+    <button type="submit">Save</button>
+
+</form>

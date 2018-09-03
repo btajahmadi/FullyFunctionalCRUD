@@ -1,0 +1,12 @@
+﻿@model Clients.Models.Client
+
+<h2>New client</h2>
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Name"></label>
+        <input type="text" name="Name"  />
+        <button type="submit" class="btn-primary">Create</button>
+    </div>
+</form>
+
